@@ -1,7 +1,7 @@
 import argparse, os
 from pathlib import Path
 
-### usage: create_law_review-folders.py [HOME_DIR] [LAW_REVIEW_NAME] [ARTICLE_AUTHOR_NAME] [FOOTNOTE_RANGE]
+### usage: create_law_review-folders.py [HOME_DIR] [LAW_REVIEWER'S_NAME] [ARTICLE_AUTHOR_NAME] [FOOTNOTE_RANGE]
 
 
 home = str(Path.home())
