@@ -18,7 +18,7 @@ def create_dir_structure(args):
 
     issue_root = get_issue_root(args)
     footnote_root = os.path.join(issue_root, "Footnotes " + get_range_str(args))
-    print(issue_root, footnote_root)
+    #print(issue_root, footnote_root)
 
     if not os.path.exists(issue_root):
         os.mkdir(issue_root)
@@ -49,7 +49,7 @@ def create_source_file(args):
         'checker': args.checker,
         'editor': args.editor,
     }
-    print(context)
+    #print(context)
     doc.render(context, autoescape=True)
     doc.save(os.path.join(get_issue_root(args), name))
 
@@ -65,8 +65,9 @@ def get_args():
     args = parser.parse_args()
     return args
 
-args = get_args()
-print(vars(args))
+if __name__ == "__main__":
+    args = get_args()
+    print(vars(args))
 
-create_dir_structure(args)
-create_source_file(args)
+    create_dir_structure(args)
+    create_source_file(args)
