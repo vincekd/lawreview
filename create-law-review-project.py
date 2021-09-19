@@ -1,6 +1,8 @@
 import argparse, os
 from docxtpl import DocxTemplate
 
+## TODO: add ability to pull out cites from doc/pdf
+
 def get_range_str(args):
     return str(args.start) + "-" + str(args.stop)
 
